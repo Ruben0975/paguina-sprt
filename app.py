@@ -1,15 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-import io  # <-- IMPORTANTE para capturar la salida de .info()
+import io  
 
-# Leer dataset
 car_data = pd.read_csv("vehicles_us.csv")
 
-# Título
 st.title("Análisis de Datos de Vehículos")
 
-# Primeras filas
 st.subheader("Primeras filas del dataset")
 st.write(car_data.head())
 
@@ -32,3 +29,4 @@ ax.set_title("Distribución de precios de vehículos")
 ax.set_xlabel("Precio")
 ax.set_ylabel("Frecuencia")
 st.pyplot(fig)
+
